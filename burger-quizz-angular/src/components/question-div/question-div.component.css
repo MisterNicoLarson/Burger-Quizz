@@ -1,0 +1,23 @@
+.question-box {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  width: 60%; 
+  max-width: 800px; 
+  margin: 20px auto; 
+  padding: 20px;
+  background-color: #f4a261;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.question-text {
+  color: #fff; 
+  font-size: 1.4rem;
+}
+
+.question-box:hover {
+  background-color: #e76f51; 
+  transition: background-color 0.3s ease;
+}

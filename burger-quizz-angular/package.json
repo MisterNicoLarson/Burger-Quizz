@@ -1,5 +1,5 @@
 {
-  "name": "my-angular-project",
+  "name": "burger-quizz-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-angular-project": "node dist/my-angular-project/server/server.mjs"
+    "serve:ssr:burger-quizz-angular": "node dist/burger-quizz-angular/server/server.mjs"
   },
   "private": true,
   "dependencies": {

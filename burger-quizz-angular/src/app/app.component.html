@@ -1,0 +1,21 @@
+<style>
+  h1 {
+    text-align: center;
+  }
+  .main {
+    text-align: center;
+  }
+</style>
+
+<main class="main">
+  <h1>Welcome to Burger Quizz</h1>
+
+  <div *ngIf="currentQuestion">
+    <app-question-div [question]="currentQuestion.question"></app-question-div>
+    <app-answer-container [answers]="currentQuestion.answers"></app-answer-container>
+  </div>
+
+  <button (click)="nextQuestion()">Next Question</button>
+</main>
+
+<router-outlet></router-outlet>
