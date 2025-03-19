@@ -1,0 +1,49 @@
+**Angular CLI Commands**
+
+### 1. Create a New Angular Project
+```bash
+ng new my-angular-project
+```
+- `my-angular-project`: Replace with your project name.
+- Follow the prompts to configure routing and styling options.
+
+### 2. Navigate to Project Directory
+```bash
+cd my-angular-project
+```
+
+### 3. Serve the Application
+```bash
+ng serve
+```
+- Opens the app on `http://localhost:4200/`
+
+### 4. Install Angular CLI (if not installed)
+```bash
+npm install -g @angular/cli
+```
+
+### 5. Create a New Component
+```bash
+ng generate component my-component
+```
+**Short version:**
+```bash
+ng g c my-component
+```
+- Creates a component named `my-component` inside `src/app/`.
+
+#### Additional Component Options:
+- **Create component in a specific folder:**
+  ```bash
+  ng g c components/my-component
+  ```
+- **Skip test file generation:**
+  ```bash
+  ng g c my-component --skip-tests
+  ```
+- **Add component to a specific module:**
+  ```bash
+  ng g c my-component --module=app
+  ```
+
