@@ -1,5 +1,8 @@
 button {
-  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
   height: 100px; 
   padding: 15px;
   font-size: 1.3rem; 
@@ -12,19 +15,35 @@ button {
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; 
 }
 
 button:hover {
-  background-color: #f4a261; 
+  background-color: #E1AD01; 
   transform: scale(1.07);
 }
 
 .answer-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px 15px; 
+  gap: 15px; 
   justify-content: center;
-  width: max-content;
+  width: fit-content;
   margin: 20px auto;
   padding: 15px;
+}
+
+.answer-grid button {
+  flex: 1; 
+}
+
+.answer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.answer-grid button {
+  flex: 1 1 auto;
+  min-width: max-content; 
 }

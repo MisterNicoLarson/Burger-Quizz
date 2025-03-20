@@ -1,0 +1,19 @@
+<div class="score-board">
+    <table>
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of players; let i = index" [class.scrollable]="i >= 4">
+          <td>{{ i + 1 }}</td>
+          <td>{{ player.name }}</td>
+          <td>{{ player.score }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

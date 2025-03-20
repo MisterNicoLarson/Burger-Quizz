@@ -110,6 +110,20 @@ export class QuizService {
 
   constructor() { }
 
+  /**
+   * Selects and returns a random question from the available question list.
+   * 
+   * @returns A randomly chosen question object from the `questions` array.
+   */
+  getRandomQuestion() {
+    return this.questions[Math.floor(Math.random() * this.questions.length)];
+  }
+
+  /**
+  * Retrieves the full list of available quiz questions.
+  * 
+  * @returns An array containing all question objects.
+  */
   getQuestions() {
     return this.questions;
   }

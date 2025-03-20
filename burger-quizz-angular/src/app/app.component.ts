@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../services/quiz.service';
+import { BurgerQuizzPageComponent } from '../components/burger-quizz-page/burger-quizz-page.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [BurgerQuizzPageComponent]
 })
 export class AppComponent implements OnInit {
   title = 'Burger Quizz';
