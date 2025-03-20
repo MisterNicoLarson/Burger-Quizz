@@ -1,4 +1,4 @@
-button {
+.answer-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@ button {
   text-align: center;
   border: none;
   border-radius: 15px; 
-  background-color: #ffb703; 
+  background-color: #ffb703; /* Couleur par défaut */
   color: #000; 
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
@@ -18,32 +18,19 @@ button {
   white-space: nowrap; 
 }
 
-button:hover {
+.answer-button:hover {
   background-color: #E1AD01; 
   transform: scale(1.07);
 }
 
-.answer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px; 
-  justify-content: center;
-  width: fit-content;
-  margin: 20px auto;
-  padding: 15px;
+/* ✅ Bonne réponse → Vert salade */
+.correct {
+  background-color: #4CAF50 !important; 
+  color: white;
 }
 
-.answer-grid button {
-  flex: 1; 
-}
-
-.answer-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.answer-grid button {
-  flex: 1 1 auto;
-  min-width: max-content; 
+/* ❌ Mauvaise réponse → Rouge tomate */
+.wrong {
+  background-color: #FF6347 !important;
+  color: white;
 }

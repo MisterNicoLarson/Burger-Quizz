@@ -1,12 +1,11 @@
 <div class="quiz-container">
     <h1>Welcome to the Burger Quizz</h1>
-  
+
     <app-question-div [question]="question"></app-question-div>
-  
-    <app-answer-container [answers]="answers"></app-answer-container>
-  
-    <app-answer-div [goodAnswer]="correctAnswer"></app-answer-div>
-  
+
+    <app-answer-container [answers]="answers" [correctAnswer]="correctAnswer"></app-answer-container>
+
+    <app-answer-div goodAnswer=""></app-answer-div>
+
     <app-score-board></app-score-board>
 </div>
-  

@@ -1,4 +1,6 @@
 <div class="grid">
-    <app-answer-button *ngFor="let answer of answers" [answer]="answer"></app-answer-button>
+  <app-answer-button *ngFor="let answer of answers" 
+                     [answer]="answer" 
+                     [correctAnswer]="correctAnswer">
+  </app-answer-button>
 </div>
-  

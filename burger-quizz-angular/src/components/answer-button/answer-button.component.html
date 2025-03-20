@@ -1,3 +1,5 @@
-<button class="answer-button">
+<button (click)="handleClick()" 
+        class="answer-button" 
+        [ngClass]="{'correct': isAnswered && isCorrectAnswer, 'wrong': isAnswered && !isCorrectAnswer}">
     {{ answer }}
 </button>

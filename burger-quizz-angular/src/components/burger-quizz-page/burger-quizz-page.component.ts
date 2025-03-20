@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionDivComponent } from "../question-div/question-div.component";
 import { AnswerContainerComponent } from '../answer-container/answer-container.component';
-import { QuizService } from '../../services/quiz.service';
+import { QuestionsQuizzService } from '../../services/questions-quizz.service';
 import { AnswerDivComponent } from "../answer-div/answer-div.component";
 import { ScoreBoardComponent } from "../score-board/score-board.component";
 
@@ -18,7 +18,7 @@ export class BurgerQuizzPageComponent implements OnInit {
   correctAnswer: string = ''; 
   askedQuestions = new Set<string>(); // Stores previously asked questions
 
-  constructor(private quizService: QuizService) {}
+  constructor(private QuestionsQuizzService: QuestionsQuizzService) {}
 
   /**
    * Lifecycle hook that runs when the component is initialized.
@@ -29,13 +29,13 @@ export class BurgerQuizzPageComponent implements OnInit {
   }
 
   /**
-   * Retrieves a unique random question from the QuizService.
+   * Retrieves a unique random question from the QuestionsQuizzService.
    * If all questions have been used, the set is reset.
    * Updates the component's `question`, `answers`, and `correctAnswer` properties.
    * The answers are shuffled before being displayed.
    */
   loadNewQuestion() {
-    const allQuestions = this.quizService.getQuestions(); // Gets all available questions
+    const allQuestions = this.QuestionsQuizzService.getQuestions(); // Gets all available questions
 
     if (this.askedQuestions.size >= allQuestions.length) {
       this.askedQuestions.clear(); // Resets when all questions have been asked
@@ -43,7 +43,7 @@ export class BurgerQuizzPageComponent implements OnInit {
 
     let quizData;
     do {
-      quizData = this.quizService.getRandomQuestion();
+      quizData = this.QuestionsQuizzService.getRandomQuestion();
     } while (this.askedQuestions.has(quizData.question)); // Ensures uniqueness
 
     this.askedQuestions.add(quizData.question); // Stores the asked question

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizService } from '../services/quiz.service';
+import { QuestionsQuizzService } from '../services/questions-quizz.service';
 import { BurgerQuizzPageComponent } from '../components/burger-quizz-page/burger-quizz-page.component';
 
 @Component({
@@ -13,10 +13,10 @@ export class AppComponent implements OnInit {
   currentQuestionIndex: number = 0;
   questions: any[] = [];
 
-  constructor(private quizService: QuizService) {}
+  constructor(private QuestionsQuizzService: QuestionsQuizzService) {}
 
   ngOnInit() {
-    this.questions = this.quizService.getQuestions();
+    this.questions = this.QuestionsQuizzService.getQuestions();
   }
 
   get currentQuestion() {

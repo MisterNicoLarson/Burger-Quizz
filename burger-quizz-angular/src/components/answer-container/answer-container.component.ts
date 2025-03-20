@@ -11,6 +11,7 @@ import { AnswerButtonComponent } from '../answer-button/answer-button.component'
 })
 export class AnswerContainerComponent {
   @Input() answers: string[] = [];
+  @Input() correctAnswer: string = '';
 
   /**
    * Lifecycle hook that runs when the component is initialized.
